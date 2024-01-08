@@ -259,7 +259,7 @@ app.registerExtension({
         const _original_save_api_onclick = document.getElementById('comfy-dev-save-api-button').onclick;
         document.getElementById('comfy-dev-save-api-button').onclick = function() {
             const do_modify_was = do_modify
-            do_modify = false;
+            do_modify = true; // fix bug with exporting to api. -ec jan8.2024
             _original_save_api_onclick();
             do_modify = do_modify_was;
         }
